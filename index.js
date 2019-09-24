@@ -1,16 +1,27 @@
 'use strict'
 
 const axios = require('axios')
-const JWT = require('./lib/jwt')
+const Jwt = require('./lib/jwt')
+const Token = require('./lib/token')
+const AccessToken = require('./lib/AccessToken')
 
-module.exports = (config) => {
+function Utils (config) {
   const request = axios.create({
+    // eslint-disable-next-line dot-notation
     baseURL: config['serverUrl']
   })
 
-  const jwt = new JWT(config, request)
+  const jwt = new Jwt(config, request)
+  const accessToken = new AccessToken(config, request)
 
   return {
-    jwt
+    jwt,
+    Token,
+    accessToken
   }
+}
+
+module.exports = {
+  Token,
+  Utils
 }
