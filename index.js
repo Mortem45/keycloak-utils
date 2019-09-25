@@ -5,7 +5,7 @@ const Jwt = require('./lib/jwt')
 const Token = require('./lib/token')
 const AccessToken = require('./lib/AccessToken')
 
-function Utils (config) {
+module.exports = (config) => {
   const request = axios.create({
     // eslint-disable-next-line dot-notation
     baseURL: config['serverUrl']
@@ -19,9 +19,4 @@ function Utils (config) {
     Token,
     accessToken
   }
-}
-
-module.exports = {
-  Token,
-  Utils
 }

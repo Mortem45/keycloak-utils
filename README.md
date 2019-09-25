@@ -4,7 +4,7 @@ utiles module to keycloak
 
 ## Installation
 
-Use the package manager [npm](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [npm](https://npmjs.com/) to install foobar.
 
 ```bash
 npm install keycloak-utils
