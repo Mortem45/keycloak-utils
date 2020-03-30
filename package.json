@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Utiles module to keycloak",
   "main": "index.js",
+  "keywords": ["keycloak"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
